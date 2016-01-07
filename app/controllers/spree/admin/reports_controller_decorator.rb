@@ -5,8 +5,8 @@ Spree::Admin::ReportsController.class_eval do
   def basic_report_setup
     @products = Spree::Product.all
     @taxons = Spree::Taxon.all
-    if defined?(MultiDomainExtension)
-      @stores = Store.all
+    if Spree::Store.count > 1
+      @stores = Spree::Store.all
     end
   end
 
