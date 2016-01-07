@@ -1,0 +1,15 @@
+de:
+  adv_report:
+    revenue: "Gesamtumsatz"
+    units: "Stückzahl"
+    profit: "Gesamtgewinn"
+    count: "Bestellungen"
+    top_products: "Top Produkte"
+    top_customers: "Top Kunden"
+    submit: "Senden"
+    geo_revenue: "Umsatz nach Herkunft"
+    geo_units: "Stückzahl nach Herkunft"
+    geo_profit: "Gewinn nach Herkunft"
+    sales_total: 'Totalabsatz'
+    daily_details: 'Tägliche Übersicht'
+    order_details: "Bestellübersicht"
