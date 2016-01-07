@@ -16,7 +16,7 @@ module Spree
           Rails.env.production? ? require(c) : load(c)
         end
 
-        # Ruport::Controller::Table.formats.merge({ :flot => MyFlotFormatter })
+        # Ruport::Controller::Table.formats.merge({ flot: MyFlotFormatter })
         # if Mime::Type.lookup_by_extension(:pdf) != 'application/pdf'
         #   Mime::Type.register('application/pdf', :pdf)
         # end

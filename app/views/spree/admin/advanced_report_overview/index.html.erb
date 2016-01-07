@@ -34,7 +34,7 @@
                     </tr></thead>
                     <% @last_orders.each do |order| %>
                         <tr class="odd">
-                            <td><%=link_to order[3], admin_order_path(:id => order[3]) %></td>
+                            <td><%=link_to order[3], admin_order_path(id: order[3]) %></td>
                             <td><%= order[0] %></td>
                             <td><%= order[1] %></td>
                             <td><%= number_to_currency order[2] %></td>
@@ -59,7 +59,7 @@
             </li>
         <% end -%>
     </ul>
-    <%= render :partial => 'spree/admin/reports/advanced_report_criteria', :locals => {} %>
+    <%= render partial: 'spree/admin/reports/advanced_report_criteria', locals: {} %>
 <% end %>
 
 <% content_for :head do -%>

@@ -10,26 +10,26 @@ class Spree::AdvancedReport::IncrementReport < Spree::AdvancedReport
     self.data = INCREMENTS.inject({}) { |h, inc| h[inc] = {}; h }
 
     self.dates = {
-      :daily => {
-        :date_bucket => "%F",
-        :date_display => "%m-%d-%Y",
-        :header_display => 'Daily',
+      daily: {
+        date_bucket: "%F",
+        date_display: "%m-%d-%Y",
+        header_display: 'Daily',
       },
-      :weekly => {
-        :header_display => 'Weekly'
+      weekly: {
+        header_display: 'Weekly'
       },
-      :monthly => {
-        :date_bucket => "%Y-%m",
-        :date_display => "%B %Y",
-        :header_display => 'Monthly',
+      monthly: {
+        date_bucket: "%Y-%m",
+        date_display: "%B %Y",
+        header_display: 'Monthly',
       },
-      :quarterly => {
-        :header_display => 'Quarterly'
+      quarterly: {
+        header_display: 'Quarterly'
       },
-      :yearly => {
-        :date_bucket => "%Y",
-        :date_display => "%Y",
-        :header_display => 'Yearly',
+      yearly: {
+        date_bucket: "%Y",
+        date_display: "%Y",
+        header_display: 'Yearly',
       }
     }
   end
@@ -49,7 +49,7 @@ class Spree::AdvancedReport::IncrementReport < Spree::AdvancedReport
     end
     self.all_data.sort_rows_by!(["key"])
     self.all_data.remove_column("key")
-    self.all_data = Grouping(self.all_data, :by => "increment")
+    self.all_data = Grouping(self.all_data, by: "increment")
   end
 
   def get_bucket(type, completed_at)

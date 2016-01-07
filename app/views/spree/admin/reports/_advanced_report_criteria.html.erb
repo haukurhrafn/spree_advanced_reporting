@@ -6,14 +6,14 @@
   <div id="advanced_report_search">
     <%= form_for :search do |s| %>
       <% if @stores %>
-          Store:<br /><%= collection_select(:search, :store_id, @stores, :id, :name, { :include_blank => 'All' } ) %><br />
+          Store:<br /><%= collection_select(:search, :store_id, @stores, :id, :name, { include_blank: 'All' } ) %><br />
       <% end %>
 
       <div id="taxon_products">
       <% if @taxons %>
-        <%= t :taxons %>: <%= collection_select(:advanced_reporting, :taxon_id, @taxons, :id, :name, { :include_blank => 'All' }, { class: 'form-control' } ) %>
+        <%= t :taxons %>: <%= collection_select(:advanced_reporting, :taxon_id, @taxons, :id, :name, { include_blank: 'All' }, { class: 'form-control' } ) %>
       <% end %>
-      <%= t :products %>: <%= collection_select(:advanced_reporting, :product_id, @products, :id, :name, { :include_blank => 'All' }, { class: 'form-control' } ) %>
+      <%= t :products %>: <%= collection_select(:advanced_reporting, :product_id, @products, :id, :name, { include_blank: 'All' }, { class: 'form-control' } ) %>
       </div>
 
       <div class="date-range-filter field align-center">

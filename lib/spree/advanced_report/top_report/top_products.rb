@@ -14,9 +14,9 @@ class Spree::AdvancedReport::TopReport::TopProducts < Spree::AdvancedReport::Top
       order.line_items.each do |li|
         if !li.product.nil?
           data[li.product.id] ||= {
-            :name => li.product.name.to_s,
-            :revenue => 0,
-            :units => 0
+            name: li.product.name.to_s,
+            revenue: 0,
+            units: 0
           }
           data[li.product.id][:revenue] += li.quantity*li.price
           data[li.product.id][:units] += li.quantity
